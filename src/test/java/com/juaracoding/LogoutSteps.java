@@ -2,7 +2,6 @@ package com.juaracoding;
 
 import com.juaracoding.pages.LoginPage;
 import com.juaracoding.pages.LogoutPage;
-import com.juaracoding.utils.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,7 +13,7 @@ import org.testng.Assert;
 
 public class LogoutSteps {
 
-    private WebDriver driver = Hooks.driver;
+    private WebDriver driver = com.juaracoding.utils.Hooks.driver;
     private LoginPage loginPage = new LoginPage(driver);
     private LogoutPage logoutPage = new LogoutPage(driver);
 

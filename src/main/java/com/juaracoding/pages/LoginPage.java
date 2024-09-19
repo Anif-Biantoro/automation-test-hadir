@@ -23,7 +23,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement loginButton;
 
-    @FindBy(xpath = "//label[@name='password']")
+    @FindBy(xpath = "//div[@class='MuiAlert-icon css-1l54tgj']//*[name()='svg']")
     private WebElement errorMessage;
 
     public void enterEmail(String email) {

@@ -10,8 +10,11 @@ public class Chrome implements DriverStrategy{
     public WebDriver setStrategy() {
         System.setProperty("webdriver.chrome.driver","C://chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("useAutomationExtension", false);
-        options.addArguments("--no-sandbox");
+//        options.setExperimentalOption("useAutomationExtension", false);
+//        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1366,768");
         return new ChromeDriver(options);
     }
 }
