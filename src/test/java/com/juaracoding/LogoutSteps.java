@@ -39,7 +39,7 @@ public class LogoutSteps {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.urlContains("dashboard"));
         Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"), "User is not redirected to dashboard");
-    delay(1);
+        delay(1);
     }
 
     @When("User clicks the profile button on the dashboard")
@@ -72,4 +72,3 @@ public class LogoutSteps {
         }
     }
 }
-
