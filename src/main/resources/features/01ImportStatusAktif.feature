@@ -1,4 +1,4 @@
-Feature: Test Import Status Aktif Page
+Feature: Test Import Status Aktif Page of Hadir admin website
 
   #Positive Scenario; TCC #0001
   Scenario: Successful download file template

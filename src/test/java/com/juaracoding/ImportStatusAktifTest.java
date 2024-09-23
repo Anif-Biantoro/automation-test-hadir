@@ -94,5 +94,6 @@ public class ImportStatusAktifTest {
     public void i_should_see_error_message_displayed(){
         Assert.assertEquals(importStatusAktifPage.getTxtWrongFile(),"*File harus berupa file Excel (.xls atau .xlsx)");
         extentTest.log(LogStatus.PASS,"I should see error message displayed");
+        DriverSingleton.closeObjectInstance();
     }
 }

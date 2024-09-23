@@ -27,7 +27,6 @@ public class NavbarAdminPage {
     @FindBy(xpath = "//p[normalize-space()='Divisi']")
     private WebElement navbarDivisi;
 
-
     public void btnNavbarImport(){
         navbarImport.click();
     }
