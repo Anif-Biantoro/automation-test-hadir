@@ -6,8 +6,7 @@ public enum ScenarioTest {
     T3("Delete Jadwal Recently Added"),
     T4("Unsuccessful Input Jadwal with empty hari kerja"),
     T5("Successful Input Kalender"),
-    T6("Unsuccessful Input Kalender with Empty Field"),
-    T7("Successful Input Aturan Cuti");
+    T6("Unsuccessful Input Kalender with Empty Field");
 
     // T1 ... T100
 
