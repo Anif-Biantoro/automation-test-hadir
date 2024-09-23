@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/irfan/Documents/Juara Coding Batch 17/sit-hadir/src/test/java/com/juaracoding/ImportCutiTest.java"><classes><class name="com.juaracoding.ImportCutiTest"><methods><include name="testDownloadTemplate"/><include name="testValidImportFile"/><include name="testEmptyImportFile"/><include name="testInvalidImportFile"/></methods></class></classes></test></suite>

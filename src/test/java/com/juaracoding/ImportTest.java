@@ -3,6 +3,7 @@ package com.juaracoding;
 import com.juaracoding.pages.ImportCuti;
 import com.juaracoding.pages.LoginPage;
 import com.juaracoding.pages.TombolPage;
+import com.juaracoding.utils.Constant;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.And;
@@ -22,9 +23,11 @@ public class ImportTest {
     public ImportTest(){
         driver = Hooks.driver;
         extentTest = Hooks.extentTest;
+        driver.get(Constant.URL);
     }
     @Given("User Logged in to the Hadir Page")
     public void User_Logged_in_to_the_Hadri_Page(){
+        driver.get("https://magang.dikahadir.com/authentication/login");
         loginPage.login("admin@hadir.com","admin@hadir");
         loginPage.clickLoginBtn();
         extentTest.log(LogStatus.PASS,"User Logged in to the Hadir Page");

@@ -1,6 +1,7 @@
 package com.juaracoding.pages;
 
 import com.juaracoding.drivers.DriverSingleton;
+import com.juaracoding.utils.Constant;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ public class LoginPage {
         WebDriver driver;
 
         public LoginPage() {
+
             this.driver = DriverSingleton.getDriver();
             PageFactory.initElements(this.driver, this);
         }
@@ -17,7 +19,7 @@ public class LoginPage {
         private WebElement email;
         @FindBy(id = "password")
         private WebElement password;
-        @FindBy(xpath = "//*[@id='__next']/div/div/div[2]/div/div[2]/form/button")
+        @FindBy(xpath = "//button[@type='submit']")
         private WebElement loginBtn;
         @FindBy(xpath = "//*[@id='__next']/div/div[1]/div[2]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[1]/div/div[1]/div[2]/p")
         private WebElement txtDashboard;
