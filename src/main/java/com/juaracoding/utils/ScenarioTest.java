@@ -7,8 +7,8 @@ public enum ScenarioTest {
     T4("Unsuccessful Input Jadwal with empty hari kerja"),
     T5("Successful Input Kalender"),
     T6("Unsuccessful Input Kalender with Empty Field"),
-    T7("Successful Input Aturan Cuti");
-
+    T7("Successful Input Aturan Cuti"),
+    T8("Unsuccessful Input Aturan Cuti with Empty Field Nama Aturan Cuti");
     // T1 ... T100
 
     private String scenarioTestName;

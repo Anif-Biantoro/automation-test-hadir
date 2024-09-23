@@ -14,6 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class AturanCutiSteps {
     //Assert hanya bisa digunakan di anotasi @Then
@@ -183,6 +184,21 @@ public class AturanCutiSteps {
         aturanCuti.setBtnSimpanTambahkanDetailAturanCuti();
         delay(2);
         extentTest.log(LogStatus.PASS, "user click button Tambahkan Simpan Detail Aturan Cuti");
+    }
+
+    //##TCC 002
+    @And("User empty on Field Nama Aturan Cuti")
+    public void user_empty_on_field_nama_aturan_cuti(){
+        aturanCuti.setInputNamaAturanCutiField("");
+        delay(2);
+        extentTest.log(LogStatus.PASS, "User empty on Field Nama Aturan Cuti");
+    }
+
+    @Then("User see error message with empty field nama aturan cuti")
+    public void user_see_error_message_with_empty_field_nama_aturan_cuti() {
+        delay(3);
+        Assert.assertEquals(aturanCuti.getErrorMessageAturanCuti(), "Nama aturan cuti harus diisi!");
+        extentTest.log(LogStatus.PASS, "User see error message with empty field nama aturan cuti");
     }
 
     public static void delay(long detik){
