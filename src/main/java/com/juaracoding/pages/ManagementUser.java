@@ -1,6 +1,7 @@
 package com.juaracoding.pages;
 
 import com.juaracoding.drivers.DriverSingleton;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +13,7 @@ public class ManagementUser {
     WebDriver driver;
 
 
-    public ManagementUser (WebDriver driver){
+    public ManagementUser (){
         this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(this.driver, this);
     }
@@ -37,19 +38,19 @@ public class ManagementUser {
     private WebElement muiNik;
     @FindBy(xpath = "//*[@id='__next']/div/div[2]/div/div[1]/div/div[2]/div/div[1]/button")
     private WebElement exportBtn;
-    @FindBy(xpath = "//*[@id='mui-component-select-job_departement_id']")
+    @FindBy(xpath = "//select[@id='mui-component-select-job_departement_id']")
     private WebElement unit;
 
-    @FindBy(xpath = "//*[@id='mui-component-select-job_level_id']")
+    @FindBy(xpath = "//select[@id='mui-component-select-job_level_id']")
     private WebElement jobLevel;
 
-    @FindBy(xpath = "//*[@id='mui-component-select-employee_type_id']")
+    @FindBy(xpath = "//select[@id='mui-component-select-employee_type_id']")
     private WebElement employeeType;
 
-    @FindBy(xpath = "//*[@id='mui-component-select-job_position_id']")
+    @FindBy(xpath = "//select[@id='mui-component-select-job_position_id']")
     private WebElement jobPosistion;
 
-    @FindBy(xpath = "//*[@id='mui-component-select-location_point_id']")
+    @FindBy(xpath = "//select[@id='mui-component-select-location_point_id']")
     private WebElement locationPoint;
 
     @FindBy(xpath = "//*[@id='demo-select-small']")
@@ -85,26 +86,36 @@ public class ManagementUser {
     }
     public void setUnit(){
         unit.click();
-
+        unit.sendKeys("Air Asia");
+        unit.sendKeys(Keys.ENTER);
     }
     public void setJobLevel(){
         jobLevel.click();
-
+        jobLevel.sendKeys("Staff");
+        jobPosistion.sendKeys(Keys.ENTER);
     }
     public void setEmployeeType(){
         employeeType.click();
+        employeeType.sendKeys("PKWT");
+        employeeType.sendKeys(Keys.ENTER);
 
     }
     public void setJobPosistion(){
         jobPosistion.click();
+        jobPosistion.sendKeys("SQA");
+        jobPosistion.sendKeys(Keys.ENTER);
 
     }
     public void setLocationPoint(){
         locationPoint.click();
+        locationPoint.sendKeys("Sayur");
+        locationPoint.sendKeys(Keys.ENTER);
 
     }
     public void setStatusActive(){
         status.click();
+        status.sendKeys("Aktif");
+        status.sendKeys(Keys.ENTER);
         DriverSingleton.delay(1);
 
     }
