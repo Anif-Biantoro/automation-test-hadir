@@ -28,10 +28,10 @@ public class DivisiPage {
     @FindBy(xpath = "//input[@id='search']")
     private WebElement fieldSearch;
 
-    @FindBy(xpath = "//span[@]")
+    @FindBy(xpath = "/html/body/div[1]/div/div[2]/div/div[1]/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]/div/div/button")
     private WebElement btnShowMore;
 
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(xpath = "/html/body/div[3]/div[3]/ul/li[1]']")
     private WebElement btnEdit;
 
     @FindBy(xpath = "//tbody/tr[1]/td[4]/div[1]/div[1]/button[1]//*[name()='svg']//*[name()='g']//*[name()='circle'][1]")

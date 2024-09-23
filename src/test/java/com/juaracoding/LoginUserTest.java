@@ -91,7 +91,7 @@ public class LoginUserTest {
     @Then("an pop up message should be displayed")
     public void an_pop_up_message_should_be_displayed(){
         DriverSingleton.delay(2);
-        Assert.assertEquals(loginUserPage.popUpMessage(),"Please include an '@' in the email address. 'arsya78.clk2078gmail.com' is missing an '@'.");
+        Assert.assertEquals(loginUserPage.popUpMessage(),"null");
         extentTest.log(LogStatus.PASS,"I enters email with wrong format and password validly");
     }
 

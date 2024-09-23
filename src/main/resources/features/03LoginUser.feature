@@ -26,6 +26,7 @@ Feature: Test Login User on Hadir mobile website
     Given I am on the login page
     When I enters email with wrong format and password validly
     And I click the login button
+    #Then an error message should be displayed
     Then an pop up message should be displayed
 
   #Negative Scenario; TCC #0015

@@ -78,6 +78,7 @@ public class ImportStatusAktifTest {
 
     @And("I should see message successful import excel")
     public void i_should_see_message_berhasil_import_excel(){
+        DriverSingleton.delay(2);
         Assert.assertEquals(importStatusAktifPage.getTxtSuccessfulImport(),"Berhasil import excel");
         extentTest.log(LogStatus.PASS,"I should see message successful import excel");
     }

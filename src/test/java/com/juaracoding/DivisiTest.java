@@ -77,6 +77,7 @@ public class DivisiTest {
     //TCC HADIR 0005
     @Then("I clicked button Batal")
     public void i_clicked_button_batal(){
+        DriverSingleton.delay(2);
         divisiPage.setBtnBatal();
         extentTest.log(LogStatus.PASS,"I clicked button Batal");
     }
