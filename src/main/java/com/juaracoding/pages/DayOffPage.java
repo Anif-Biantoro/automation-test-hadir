@@ -28,6 +28,13 @@ public class DayOffPage {
     @FindBy(xpath = "//p[normalize-space()='Day Off']")
     private WebElement dayOffButton;
 
+//    @FindBy(xpath = "//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeLarge css-nza314']//*[name()='svg']")
+//    private WebElement sidebarCloseButton;
+//
+//
+//    public WebElement getSidebarCloseButton() {
+//        return sidebarCloseButton;
+//    }
 
     public WebElement getSidebarButton() {
         return sidebarButton;

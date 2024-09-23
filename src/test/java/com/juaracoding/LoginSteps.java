@@ -91,12 +91,6 @@ public class LoginSteps {
         delay(2);
     }
 
-//    @And("User clicks login button")
-//    public void user_clicks_login_button() {
-//        loginPage.clickLoginButton();
-//        delay(1);
-//    }
-
     @Then("User should see an error message for login")
     public void user_should_see_an_error_message_for_login() {
         loginPage.getErrorMessage();

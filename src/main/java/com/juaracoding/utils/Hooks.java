@@ -21,6 +21,11 @@ public class Hooks {
 
     @Before
     public void setUp(){
+        // Reset testCount if it exceeds the number of scenarios
+        if (Utils.testCount >= ScenarioTests.values().length) {
+            Utils.testCount = 0; // Reset test count to avoid out-of-bounds
+        }
+
         DriverSingleton.getInstance(Constants.CHROME);
         driver = DriverSingleton.getDriver();
         ScenarioTests[] test = ScenarioTests.values();
