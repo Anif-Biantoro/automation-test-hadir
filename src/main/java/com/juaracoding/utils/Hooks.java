@@ -1,27 +1,55 @@
 package com.juaracoding.utils;
 
+import com.juaracoding.drivers.DriverSingleton;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.concurrent.TimeUnit;
+
+import java.io.IOException;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import io.cucumber.java.*;
 
 public class Hooks {
 
     public static WebDriver driver;
+    public static ExtentTest extentTest;
+    public static ExtentReports reports = new ExtentReports("target/extent-report.html");
+
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C://chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        // Reset testCount if it exceeds the number of scenarios
+        if (Utils.testCount >= ScenarioTest.values().length) {
+            Utils.testCount = 0; // Reset test count to avoid out-of-bounds
+        }
+
+        DriverSingleton.getInstance(Constants.CHROME);
+        driver = DriverSingleton.getDriver();
+        ScenarioTest[] test = ScenarioTest.values();
+        extentTest = reports.startTest(test[Utils.testCount].getScenarioTestName());
+        Utils.testCount++;
+    }
+
+    @AfterStep
+    public void getResultStatus(Scenario scenario) throws IOException {
+        if (scenario.isFailed()){
+            String screenshotPath = Utils.getScreenshot(driver, scenario.getName().replace(" ","_"));
+            extentTest.log(LogStatus.FAIL,scenario.getName()+"\n"
+                    +extentTest.addScreenCapture(screenshotPath));
+        }
     }
 
     @After
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+    public void endTestScenario(){
+        reports.endTest(extentTest);
+        reports.flush();
+    }
+
+    @AfterAll
+    public static void finish(){
+        DriverSingleton.delay(4);
+        DriverSingleton.closeObjectInstance();
     }
 }
