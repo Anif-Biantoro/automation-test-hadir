@@ -26,27 +26,21 @@ public class AturanCutiTest {
         driver.get(Constant.URL);
     }
 
-    @Given("The User Logged in to the Hadir")
-    public void User_Logged_in_to_the_Hadri_Page(){
-        driver.get("https://magang.dikahadir.com/authentication/login");
-        loginPage.login("admin@hadir.com","admin@hadir");
-        loginPage.clickLoginBtn();
-        extentTest.log(LogStatus.PASS,"User Logged in to the Hadir Page");
-    }
-    @When("Click Management List and Click Aturan Cuti List")
+
+    @Given("Click Management List and Click Aturan Cuti List")
     public void Click_Management_List_and_Click_Aturan_Cuti_List(){
         aturanCuti.setMuiManagement();
         aturanCuti.setMuiManagement();
         extentTest.log(LogStatus.PASS,"Click Import List and Click Import Cuti");
 
     }
-    @Then("User Should Move to Aturan Cuti Page")
+    @When("User Should Move to Aturan Cuti Page")
     public void User_Should_Move_to_Aturan_Cuti_Page(){
         aturanCuti.getTxtAturanCuti();
         Assert.assertEquals(aturanCuti.getTxtAturanCuti(),"Aturan Cuti");
         extentTest.log(LogStatus.PASS,"User Should Move to Aturan Cuti Page");
     }
-    @And("User Search Aturan Cuti With Valid Name")
+    @Then("User Search Aturan Cuti With Valid Name")
     public void User_Search_Aturan_Cuti_With_Valid_Name(){
         aturanCuti.setName();
         aturanCuti.setPengaturanCuti();

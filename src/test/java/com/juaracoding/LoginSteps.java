@@ -2,6 +2,7 @@ package com.juaracoding;
 
 import com.juaracoding.drivers.DriverSingleton;
 import com.juaracoding.pages.LoginPage;
+import com.juaracoding.utils.Constant;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import io.cucumber.java.en.And;
@@ -20,8 +21,6 @@ public class LoginSteps {
         driver = Hooks.driver;
         extentTest = Hooks.extentTest;
     }
-
-
 
     @Given("The User is on login page for login")
     public void the_user_is_on_login_page_for_login() {

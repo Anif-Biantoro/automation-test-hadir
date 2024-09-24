@@ -29,22 +29,16 @@ public class ImportTest {
         driver.get(Constant.URL);
     }
 
-    @Given("User Logged in to the Hadir Page")
-    public void User_Logged_in_to_the_Hadri_Page() {
-        driver.get("https://magang.dikahadir.com/authentication/login");
-        loginPage.login("admin@hadir.com", "admin@hadir");
-        loginPage.clickLoginBtn();
-        extentTest.log(LogStatus.PASS, "User Logged in to the Hadir Page");
-    }
 
-    @When("Click Import List and Click Import Cuti")
+
+    @Given("Click Import List and Click Import Cuti")
     public void Click_Import_List_and_Click_Import_Cuti() {
         importCuti.setMuiImport();
         importCuti.setMuiImportCuti();
         extentTest.log(LogStatus.PASS, "Click Import List and Click Import Cuti");
     }
 
-    @Then("User Should Move To Import Cuti Page")
+    @When("User Should Move To Import Cuti Page")
     public void User_Should_Move_To_Import_Cuti_Page() {
         Assert.assertEquals(importCuti.getTxtDashboard(), "Import Cuti");
         extentTest.log(LogStatus.PASS, "User Should Move To Import Cuti Page");
