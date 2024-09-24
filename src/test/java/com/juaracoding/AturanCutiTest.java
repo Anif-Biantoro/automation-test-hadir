@@ -1,7 +1,6 @@
 package com.juaracoding;
 
 import com.juaracoding.pages.AturanCuti;
-import com.juaracoding.pages.ImportCuti;
 import com.juaracoding.pages.LoginPage;
 import com.juaracoding.pages.TombolPage;
 import com.juaracoding.utils.Constant;
