@@ -13,7 +13,9 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+
 public class ImportTest {
+
     private WebDriver driver;
     private ExtentTest extentTest;
     private LoginPage loginPage = new LoginPage();
@@ -21,6 +23,7 @@ public class ImportTest {
     private ImportCuti importCuti = new ImportCuti();
 
     public ImportTest() {
+
         driver = Hooks.driver;
         extentTest = Hooks.extentTest;
         driver.get(Constant.URL);

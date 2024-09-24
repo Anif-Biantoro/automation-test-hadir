@@ -1,8 +1,9 @@
 package com.juaracoding.utils;
 
-import jdk.incubator.vector.VectorOperators;
+
 
 public enum ScenarioTests {
+
 
     T1("Successful login with valid credentials"),
     T2("User Logged in to the Hadir Page"),
@@ -19,10 +20,12 @@ public enum ScenarioTests {
     private String scenarioTestName;
 
     ScenarioTests(String value){
+
         scenarioTestName = value;
     }
 
     public String getScenarioTestName() {
+
         return scenarioTestName;
     }
 

@@ -26,7 +26,7 @@ public class AturanCutiTest {
         driver.get(Constant.URL);
     }
 
-    @Given("User Logged in to the Hadir Page")
+    @Given("The User Logged in to the Hadir")
     public void User_Logged_in_to_the_Hadri_Page(){
         driver.get("https://magang.dikahadir.com/authentication/login");
         loginPage.login("admin@hadir.com","admin@hadir");

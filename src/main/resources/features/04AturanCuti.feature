@@ -1,6 +1,6 @@
 Feature: AturanCuti functionality
   Scenario: Search Atruan Cuti
-    Given User Logged in to the Hadir Page
+    Given The User Logged in to the Hadir
     When Click Management List and Click Aturan Cuti List
     Then User Should Move to Aturan Cuti Page
     And User Search Aturan Cuti With Valid Name
