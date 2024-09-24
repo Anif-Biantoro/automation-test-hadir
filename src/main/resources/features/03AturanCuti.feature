@@ -17,7 +17,7 @@ Feature: Input Aturan Cuti
     And User click Button Tambahkan Simpan Aturan Cuti
     And User searching recently added for Aturan Cuti
     And user click search button Aturan Cuti
-    And user scroll horizontal and click button action for view
+    And user scroll horizontal and click button action for view Aturan Cuti
     When user click button Tambahkan Detail Aturan Cuti
     And User input on Field Minimal Bulan Bekerja
     And User input on Field Total Cuti

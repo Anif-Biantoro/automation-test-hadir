@@ -12,7 +12,7 @@ Feature: Input Kalender
     And User click Tambah Button
     When User on Search Field to searching recently added
     And user click search button
-    And user click button action for view
+    And user click button action for view Kalender
     When user click button Tambahkan kalender
     And user choose Tanggal Cuti
     And user choose Tipe Cuti

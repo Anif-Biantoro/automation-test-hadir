@@ -127,7 +127,7 @@ public class JadwalPage {
     @FindBy(xpath = "//*[@id=\"typeJadwal\"]")
     private WebElement clickEditTipeJadwal;
 
-    @FindBy(xpath = "/html/body/div[14]/div[3]/ul/li[3]")
+    @FindBy(xpath = "/html/body/div[5]/div[3]/ul/li[3]")
     private WebElement clickPilihEditTipeJadwal;
 
     @FindBy(xpath = "/html/body/div[4]/div[3]/div/form/div[2]/button[1]")

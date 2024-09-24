@@ -39,9 +39,9 @@ public class JadwalSteps {
     @When("User enters valid email and password for jadwal")
     public void user_enters_valid_email_and_password_for_jadwal() {
         loginPage.enterEmail("admin@hadir.com");
-        delay(1);
+        delay(3);
         loginPage.enterPassword("admin@hadir");
-        delay(2);
+        delay(3);
         extentTest.log(LogStatus.PASS, "User enters valid email and password for jadwal");
     }
 
@@ -55,7 +55,7 @@ public class JadwalSteps {
 
     @When("User should be redirected to dashboard for jadwal")
     public void user_should_be_redirected_to_dashboard_for_jadwal() {
-        delay(1);
+        delay(3);
         driver.getCurrentUrl();
         delay(3);
         extentTest.log(LogStatus.PASS, "User should be redirected to dashboard for jadwal");
@@ -64,7 +64,7 @@ public class JadwalSteps {
     @And("User click Management Menu")
     public void user_click_management_menu(){
         jadwalPage.setBtnManagementmenu();
-        delay(2);
+        delay(3);
         extentTest.log(LogStatus.PASS, "User enters valid email and password for jadwal");
     }
 
@@ -175,7 +175,7 @@ public class JadwalSteps {
     @And("User search by Jadwal Name")
     public void user_search_by_jadwal_name(){
       jadwalPage.setInputSearchJadwal("CS Live Tiktik");
-      delay(2);
+      delay(3);
       jadwalPage.setBtnSearchJadwal();
         extentTest.log(LogStatus.PASS, "User search by Jadwal Name");
     }
@@ -183,7 +183,7 @@ public class JadwalSteps {
     @And("User Click Button for Popup and choose Edit")
     public void user_click_button_for_popup_and_choose_edit(){
         jadwalPage.setBtnMoreJadwal();
-        delay(2);
+        delay(3);
         jadwalPage.setBtnMoreEditJadwal();
         extentTest.log(LogStatus.PASS, "User Click Button for Popup and choose Edit");
     }
@@ -191,7 +191,7 @@ public class JadwalSteps {
     @And("User Edit Tipe Jadwal")
     public void user_edit_tipe_jadwal(){
         jadwalPage.setClickEditTipeJadwal();
-        delay(2);
+        delay(3);
         jadwalPage.setClickPilihEditTipeJadwal();
         extentTest.log(LogStatus.PASS, "User Edit Tipe Jadwal");
     }
@@ -199,7 +199,7 @@ public class JadwalSteps {
     @And("User Edit Toleransi Keterlambatan")
     public void user_edit_toleransi_keterlambatan(){
         driver.findElement(By.xpath("//*[@id=\"t_keterlambatan\"]")).clear();
-        delay(2);
+        delay(3);
         jadwalPage.setInputKeterlambatan("30");
         extentTest.log(LogStatus.PASS, "User Edit Toleransi Keterlambatan");
     }
@@ -215,7 +215,7 @@ public class JadwalSteps {
     @And("User Click Button Action for choose delete")
     public void user_click_button_action_for_choose_delete(){
         jadwalPage.setBtnMoreJadwal();
-        delay(2);
+        delay(3);
         jadwalPage.setBtnMoreDeleteJadwal();
         extentTest.log(LogStatus.PASS, "User Click Button Action for choose delete");
     }
@@ -238,7 +238,7 @@ public class JadwalSteps {
 
     @Then("User see error message for empty hari kerja")
     public void user_see_error_message_for_empty_hari_kerja() {
-        delay(2);
+        delay(3);
         Assert.assertEquals(jadwalPage.getErrorMessageEmptyHariKerja(), "Isi terlebih dahulu hari kerja");
         extentTest.log(LogStatus.PASS, "User click Button Save Add for empty hari kerja");
     }

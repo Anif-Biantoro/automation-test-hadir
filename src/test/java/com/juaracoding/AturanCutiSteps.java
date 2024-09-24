@@ -145,8 +145,8 @@ public class AturanCutiSteps {
         extentTest.log(LogStatus.PASS, "user click search button Aturan Cuti");
     }
 
-    @And("user scroll horizontal and click button action for view")
-    public void user_scroll_horizontal_and_click_button_action_for_view(){
+    @And("user scroll horizontal and click button action for view Aturan Cuti")
+    public void user_scroll_horizontal_and_click_button_action_for_view_aturan_cuti(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement slide = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div/div[1]/section/div/div/div[2]/div[1]"));
         js.executeScript("arguments[0].scrollBy(0, 300);", slide);
@@ -155,7 +155,7 @@ public class AturanCutiSteps {
         delay(2);
         aturanCuti.setBtnView();
         delay(2);
-        extentTest.log(LogStatus.PASS, "user scroll horizontal and click button action for view");
+        extentTest.log(LogStatus.PASS, "user scroll horizontal and click button action for view Aturan Cuti");
     }
 
     @When("user click button Tambahkan Detail Aturan Cuti")

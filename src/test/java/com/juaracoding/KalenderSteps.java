@@ -106,12 +106,12 @@ public class KalenderSteps {
             extentTest.log(LogStatus.PASS, "user click search button");
         }
 
-        @And("user click button action for view")
-        public void user_click_button_action_for_view() {
+        @And("user click button action for view Kalender")
+        public void user_click_button_action_for_view_kalender() {
             kalenderPage.setButtonAction();
             delay(3);
             kalenderPage.setButtonView();
-            extentTest.log(LogStatus.PASS, "user click button action for view");
+            extentTest.log(LogStatus.PASS, "user click button action for view Kalender");
         }
 
         @When("user click button Tambahkan kalender")
