@@ -1,8 +1,11 @@
 package com.juaracoding.utils;
 
 public class Constants {
+        //Global Variable
+        public static final String CHROME = "chrome";
+        public static final String FIREFOX = "firefox";
+        public static final String URL = "https://magang.dikahadir.com/laporan/overtime";
+        public static final long TIMEOUT = 10;
+    }
 
-    public final static String URL = "https://magang.dikahadir.com/authentication/login";
-    public final static String CHROME = "chrome";
-    public final static long TIMEOUT = 10;
-}
+

@@ -1,13 +1,13 @@
 package com.juaracoding.drivers.strategies;
 
-import com.juaracoding.utils.Constants;
-
 public class DriverStrategyImplementer {
 
-    public static DriverStrategy chooseStrategy(String strategy) {
-        switch (strategy) {
-            case Constants.CHROME:
+    public static DriverStrategy chooseStrategy(String strategy){
+        switch (strategy){
+            case "chrome":
                 return new Chrome();
+            case "firefox":
+                return new Firefox();
             default:
                 return null;
         }
