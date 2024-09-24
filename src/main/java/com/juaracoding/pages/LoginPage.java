@@ -1,44 +1,57 @@
 package com.juaracoding.pages;
 
+import com.juaracoding.drivers.DriverSingleton;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    WebDriver driver;
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
+    private WebDriver driver;
+
+    public LoginPage(){
+        this.driver = DriverSingleton.getDriver();
         PageFactory.initElements(driver, this);
     }
 
-
     @FindBy(xpath = "//input[@id='email']")
-    private WebElement usernameField;
+    private WebElement email;
 
     @FindBy(xpath = "//input[@id='password']")
-    private WebElement passwordField;
+    private WebElement password;
 
     @FindBy(xpath = "//button[@type='submit']")
-    private WebElement loginButton;
+    private WebElement btnLogin;
 
-    @FindBy(xpath = "//label[@name='password']")
-    private WebElement errorMessage;
+    @FindBy(xpath = "//*[@id=\"__next\"]/div/header/div/button[3]/div/div[2]/h5[2]")
+    private WebElement userDrop;
 
-    public void enterEmail(String email) {
-        usernameField.sendKeys(email);
+    @FindBy(xpath = "//*[@id=\"profile-menu\"]/div[3]/ul/div/button[2]")
+    private WebElement btnLogout;
+
+    public void login(String email, String password){
+        this.email.sendKeys(email);
+        this.password.sendKeys(password);
     }
 
-    public void enterPassword(String password) {
-        passwordField.sendKeys(password);
+    public void setBtnLogin(){
+        btnLogin.click();
     }
 
-    public void clickLoginButton() {
-        loginButton.click();
+    public void clearPassword(){
+        password.sendKeys(Keys.CONTROL+"A");
+        password.sendKeys(Keys.DELETE);
     }
 
-    public String getErrorMessage() {
-        return errorMessage.getText();
+    public void clearUsername(){
+        email.sendKeys(Keys.CONTROL+"A");
+        email.sendKeys(Keys.DELETE);
+    }
+
+    public void logout(){
+        userDrop.click();
+        btnLogout.click();
     }
 }
